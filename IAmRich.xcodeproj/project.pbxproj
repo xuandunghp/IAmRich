@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		96119EEE1BABC114008477DA /* ruby.png in Resources */ = {isa = PBXBuildFile; fileRef = 96119EED1BABC114008477DA /* ruby.png */; settings = {ASSET_TAGS = (); }; };
 		96D7ABF81B77555E006F101C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 96D7ABF71B77555E006F101C /* main.m */; };
 		96D7ABFB1B77555E006F101C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 96D7ABFA1B77555E006F101C /* AppDelegate.m */; };
 		96D7ABFE1B77555E006F101C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96D7ABFD1B77555E006F101C /* ViewController.m */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		96119EED1BABC114008477DA /* ruby.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ruby.png; sourceTree = "<group>"; };
 		96D7ABF21B77555E006F101C /* IAmRich.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IAmRich.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96D7ABF61B77555E006F101C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96D7ABF71B77555E006F101C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -60,6 +62,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		96119EEF1BABC11A008477DA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				96119EF01BABC128008477DA /* Photos */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		96119EF01BABC128008477DA /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+				96119EED1BABC114008477DA /* ruby.png */,
+			);
+			name = Photos;
+			sourceTree = "<group>";
+		};
 		96D7ABE91B77555E006F101C = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +99,7 @@
 		96D7ABF41B77555E006F101C /* IAmRich */ = {
 			isa = PBXGroup;
 			children = (
+				96119EEF1BABC11A008477DA /* Resources */,
 				96D7ABF91B77555E006F101C /* AppDelegate.h */,
 				96D7ABFA1B77555E006F101C /* AppDelegate.m */,
 				96D7ABFC1B77555E006F101C /* ViewController.h */,
@@ -163,7 +182,7 @@
 		96D7ABEA1B77555E006F101C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "IOS32 class - Techmaster";
 				TargetAttributes = {
 					96D7ABF11B77555E006F101C = {
@@ -200,6 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				96D7AC011B77555E006F101C /* Main.storyboard in Resources */,
+				96119EEE1BABC114008477DA /* ruby.png in Resources */,
 				96D7AC061B77555E006F101C /* LaunchScreen.xib in Resources */,
 				96D7AC031B77555E006F101C /* Images.xcassets in Resources */,
 			);
@@ -284,6 +304,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -349,6 +370,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = IAmRich/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ios32.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -359,6 +381,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = IAmRich/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ios32.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -367,16 +390,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = IAmRichTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ios32.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IAmRich.app/IAmRich";
 			};
@@ -386,12 +407,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = IAmRichTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ios32.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IAmRich.app/IAmRich";
 			};
@@ -416,6 +435,7 @@
 				96D7AC171B77555E006F101C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		96D7AC181B77555E006F101C /* Build configuration list for PBXNativeTarget "IAmRichTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +444,7 @@
 				96D7AC1A1B77555E006F101C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
